@@ -109,9 +109,3 @@ class BinaryStreamWriter(AbstractContextManager):
 
     def __exit__(self, *e) -> None:
         return self.close()
-
-
-with BinaryStreamWriter("data.bin") as stream:
-    stream.write_ubyte(5)
-    stream.write_short(465)
-    stream.write_ascii_nt_string("Hello")
